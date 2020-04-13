@@ -14,16 +14,15 @@ jobs:
       displayName: 'Install Node.js'
 
     - script: |
-        cd frontend
         yarn install
-        cp ../deployment/.env.production .env.production.local
+        cp ./deployment/.env.production .env.production.local
         yarn build
       displayName: 'Build'
 
     - task: CopyFiles@2
       displayName: 'Copy Files'
       inputs:
-        SourceFolder: 'frontend/build'
+        SourceFolder: 'build'
         TargetFolder: '$(build.artifactstagingdirectory)'
         CleanTargetFolder: true
 
