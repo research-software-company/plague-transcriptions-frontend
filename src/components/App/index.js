@@ -10,9 +10,16 @@ import Transcribe from "../Transcribe";
 import "./App.scss";
 import Footer from "../Footer";
 import ProtectedRoute from "../ProtectedRoute";
-import api from '../../api'
+import api from '../../api';
+import store from '../../Store';
+import { observer } from "mobx-react";
+
 
 const App = class App extends React.Component {
+    constructor(){
+        super()
+        this.store = store
+    }
   componentDidMount() {
     // Update height of container
     api.populateManuscripts()
@@ -31,7 +38,7 @@ const App = class App extends React.Component {
             </Route>
             <Route path="/transcribe/:pageId">
               {/* <ProtectedRoute nextRoute="/transcribe/:pageId"> */}
-                <Transcribe />
+                <Transcribe pageId={store.state.current_page_id} />
               {/* </ProtectedRoute> */}
             </Route>
           </Switch>
@@ -41,4 +48,4 @@ const App = class App extends React.Component {
     );
   }
 };
-export default App;
+export default observer(App);

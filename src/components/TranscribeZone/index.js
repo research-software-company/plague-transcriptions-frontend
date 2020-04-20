@@ -1,7 +1,8 @@
 import React from "react";
-
+import { withRouter } from "react-router-dom";
 import { TextareaAutosize, Button } from "@material-ui/core";
 import api from "../../api";
+import store from "../../Store";
 
 const TranscribeZone = class Transcribe extends React.Component {
   constructor() {
@@ -10,14 +11,26 @@ const TranscribeZone = class Transcribe extends React.Component {
       transcription: null,
     };
   }
+
   updateTranscription(event) {
     this.setState({ transcription: event.target.value });
   }
 
+  goToNextPage() {
+    store.state.current_page_id = +store.state.current_page_id+1
+    this.props.history.push(`/transcribe/${store.state.current_page_id}`);
+  }
+
   sendTranscription() {
-    api.sendTranscription({transcriptionId: this.props.item.id, text: this.state.transcription}).then(res => {
-        debugger
-    })
+    const self = this;
+    api
+      .sendTranscription({
+        transcriptionId: this.props.item.id,
+        text: this.state.transcription,
+      })
+      .then((res) => {
+        self.goToNextPage.call(self);
+      });
   }
 
   componentWillMount() {
@@ -26,14 +39,16 @@ const TranscribeZone = class Transcribe extends React.Component {
 
   render() {
     const suggestion = this.props.item.suggestion.text;
-    const transcription = this.state.transcription;
     const manuscript = this.props.item.manuscript;
+    
     return (
       <React.Fragment>
         <div>
-            <div><a href="/manuscripts">Manuscripts</a></div>
+          <div>
+            <a href="/manuscripts">Manuscripts</a>
+          </div>
           <div style={{ fontWeight: "bold" }}>
-            {manuscript.heb_name || manuscript.eng_name}
+            {manuscript.heb_name || manuscript.eng_name} ({this.props.item.page.page_name})
           </div>
           <div>{manuscript.notes}</div>
           <div style={{ fontSize: "10px" }}>
@@ -53,11 +68,10 @@ const TranscribeZone = class Transcribe extends React.Component {
           />
 
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            
             <Button
               variant="contained"
               color="primary"
-              onClick={this.sendTranscription.bind(this)}
+              onClick={this.goToNextPage.bind(this)}
             >
               Next Page
             </Button>
@@ -75,4 +89,4 @@ const TranscribeZone = class Transcribe extends React.Component {
   }
 };
 
-export default TranscribeZone;
+export default withRouter(TranscribeZone);
