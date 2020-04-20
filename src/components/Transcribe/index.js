@@ -15,10 +15,11 @@ const Transcribe = class Transcribe extends React.Component {
     };
   }
 
-  updateViewer(pageId) {
-      if(this.seaDragon){
-          this.seaDragon.destroy()
-      }
+  updateItem(pageId) {
+    if (this.seaDragon) {
+      this.seaDragon.destroy()
+    }
+
     const self = this;
     let element = document.getElementById("image-container");
 
@@ -28,19 +29,17 @@ const Transcribe = class Transcribe extends React.Component {
       const item = res && res.data && res.data.page && res.data;
 
       self.setState({ item }, function () {
-          
-            this.seaDragon = new window.OpenSeadragon({
-                element: this.el,
-                showRotationControl: true,
-                gestureSettingsTouch: {
-                  pinchRotate: true,
-                },
-                tileSources: {
-                  type: "image",
-                  url: `${item.page.iiif_url}/full/full/0/default.jpg`,
-                },
-              });
-                
+        this.seaDragon = new window.OpenSeadragon({
+          element: this.el,
+          showRotationControl: true,
+          gestureSettingsTouch: {
+            pinchRotate: true,
+          },
+          tileSources: {
+            type: "image",
+            url: `${item.page.iiif_url}/full/full/0/default.jpg`,
+          },
+        });
       });
     });
   }
@@ -50,8 +49,13 @@ const Transcribe = class Transcribe extends React.Component {
   }
 
   componentWillReceiveProps(props) {
+    const self = this;
     const pageId = props.pageId;
-    this.updateViewer(pageId);
+    
+    // Empty transcription in state
+    this.setState({ item: null }, function () {
+      self.updateItem(pageId);
+    });
   }
 
   componentDidMount() {

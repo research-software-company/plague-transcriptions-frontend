@@ -17,7 +17,7 @@ const HeaderCarouselItem = class HeaderCarouselItem extends React.Component {
             flex: 3,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundImage: `url(${this.props.item.pages[5].iiif_url}/full/,280/0/default.jpg)`,
+            backgroundImage: `url(${this.props.item.pages[1].iiif_url}/full/,280/0/default.jpg)`,
           }}
         ></div>
         <div

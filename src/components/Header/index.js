@@ -19,7 +19,7 @@ function Header() {
           <h2>
             Plague days{" "}
             <span style={{ color: "#888" }}>
-              in historical Jewish manuscripts
+            | Historical Jewish Manuscripts
             </span>
           </h2>
         </div>

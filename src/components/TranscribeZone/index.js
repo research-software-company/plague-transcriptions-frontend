@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 import { TextareaAutosize, Button } from "@material-ui/core";
 import api from "../../api";
 import store from "../../Store";
@@ -18,7 +17,6 @@ const TranscribeZone = class Transcribe extends React.Component {
 
   goToNextPage() {
     store.state.current_page_id = +store.state.current_page_id+1
-    this.props.history.push(`/transcribe/${store.state.current_page_id}`);
   }
 
   sendTranscription() {
@@ -62,7 +60,7 @@ const TranscribeZone = class Transcribe extends React.Component {
           <TextareaAutosize
             defaultValue={suggestion}
             onChange={this.updateTranscription.bind(this)}
-            style={{ width: "100%", minHeight: "250px" }}
+            style={{ width: "100%", minHeight: "250px", fontSize:'14px' }}
             placeholder="קדימה, עזרו לנו להעשיר את ארון הספרים היהודי הדיגיטלי"
             style={{ textAlign: "right", width: "100%", height: "600px" }}
           />
@@ -89,4 +87,4 @@ const TranscribeZone = class Transcribe extends React.Component {
   }
 };
 
-export default withRouter(TranscribeZone);
+export default TranscribeZone;
