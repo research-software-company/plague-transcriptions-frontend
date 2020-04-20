@@ -10,3 +10,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size:62.5%;
 }
+
+.header-carousel{
+    box-shadow: 0px 0px 6px 2px #555;
+}
+
+.header-carousel, .CarouselItem, .CarouselItem>div{
+    height:100%;
+}

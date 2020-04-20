@@ -57,13 +57,13 @@ const Transcribe = withRouter(
           <Navbar />
 
           <div style={{ display: "flex", padding:'10px' }}>
-            <div style={{ flex: 1 }}>
+            <div style={{ flex: 1,padding:'5px', backgroundColor:'#000'}}>
               <div
                 id="image-container"
-                style={{ width: "100%", height: "600px" }}
+                style={{ width: "100%", height:'100%' }}
               ></div>
             </div>
-            <div style={{ flex: 1, textAlign: 'right' }}>{itemTranscribeZone}</div>
+            <div style={{ padding:'5px',flex: 1, textAlign: 'right' }}>{itemTranscribeZone}</div>
           </div>
         </React.Fragment>
       );

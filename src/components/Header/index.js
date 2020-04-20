@@ -1,12 +1,11 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
+import HeaderCarousel from "../HeaderCarousel";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   appHeader: {
     height: "20rem",
     backgroundColor: "#efefef",
-    padding: "0.5rem",
     color: "#666",
   },
 }));
@@ -15,11 +14,18 @@ function Header() {
   const classes = useStyles();
   return (
     <React.Fragment>
+      <div style={{ padding: "5px" }}>
+        <div style={{ borderLeft: "5px solid green", padding: "5px" }}>
+          <h2>
+            Plague days{" "}
+            <span style={{ color: "#888" }}>
+              in historical Jewish manuscripts
+            </span>
+          </h2>
+        </div>
+      </div>
       <header className={classes.appHeader}>
-        <Typography variant="h2">Days Of The Plague</Typography>
-        <Typography variant="h5">
-          Transcribing Jewish Plague-Related Manuscripts
-        </Typography>
+        <HeaderCarousel />
       </header>
     </React.Fragment>
   );

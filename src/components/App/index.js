@@ -9,10 +9,13 @@ import Content from "../Content";
 import Transcribe from "../Transcribe";
 import "./App.scss";
 import Footer from "../Footer";
+import ProtectedRoute from "../ProtectedRoute";
+import api from '../../api'
 
 const App = class App extends React.Component {
   componentDidMount() {
     // Update height of container
+    api.populateManuscripts()
   }
 
   render() {
@@ -27,7 +30,9 @@ const App = class App extends React.Component {
               <Manuscripts />
             </Route>
             <Route path="/transcribe/:pageId">
-              <Transcribe />
+              {/* <ProtectedRoute nextRoute="/transcribe/:pageId"> */}
+                <Transcribe />
+              {/* </ProtectedRoute> */}
             </Route>
           </Switch>
         </Router>

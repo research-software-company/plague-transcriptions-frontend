@@ -36,15 +36,29 @@ const Manuscripts = withRouter(
         });
 
         return (
-            <React.Fragment>
-<Navbar />
-<div
-            
-            >
-              {thumbs}
-            </div> 
-            </React.Fragment>
-          
+          <React.Fragment>
+            <Navbar />
+            <div>
+              <h2>Manuscripts</h2>
+              <div style={{ display: "flex"}}>
+                <div style={{ padding: "5px" }}>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </div>
+                <div style={{ padding: "5px" }}>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </div>
+              </div>
+            </div>
+            <div>{thumbs}</div>
+          </React.Fragment>
         );
       }
     }

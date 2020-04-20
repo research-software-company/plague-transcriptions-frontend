@@ -4,6 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import GoogleLoginButton from "../GoogleLoginButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,13 +17,13 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appBar: {
-      backgroundColor:'#343a40',
-      boxShadow:'none',
+    backgroundColor: "#343a40",
+    boxShadow: "none",
   },
-  link:{
-      color:'white',
-      textDecoration:'none'
-  }
+  link: {
+    color: "white",
+    textDecoration: "none",
+  },
 }));
 
 function Navbar() {
@@ -32,9 +33,15 @@ function Navbar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            <Link className={classes.link} to="/">Plague Days</Link>
+          <Typography className={classes.title}>
+            <Link className={classes.link} to="/">
+              Plague days{" "}
+              <span style={{ color: "#888" }}>
+                in historical Jewish manuscripts
+              </span>
+            </Link>
           </Typography>
+          <GoogleLoginButton />
         </Toolbar>
       </AppBar>
     </div>
