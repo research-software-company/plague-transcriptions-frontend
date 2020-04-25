@@ -39,21 +39,29 @@ const Manuscripts = withRouter(
           <React.Fragment>
             <Navbar />
             <div>
-              <h2>Manuscripts</h2>
-              <div style={{ display: "flex"}}>
+              <h2>כתבי היד</h2>
+              <div style={{ display: "flex" }}>
                 <div style={{ padding: "5px" }}>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולהע
+                  צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי להאמית קרהשק
+                  סכעיט דז מא, מנכם למטכין נשואי מנורךגולר מונפרר סוברט לורם
+                  שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט. לפרומי בלוף קינץ תתיח
+                  לרעח. לת צשחמי צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה
+                  שיצמה ברורק. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק
+                  ליץ, הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך
+                  וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת יבש, כאנה ניצאחו
+                  נמרגי שהכים תוק, הדש שנרא התידם הכייר וק..
                 </div>
                 <div style={{ padding: "5px" }}>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולהע
+                  צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי להאמית קרהשק
+                  סכעיט דז מא, מנכם למטכין נשואי מנורךגולר מונפרר סוברט לורם
+                  שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט. לפרומי בלוף קינץ תתיח
+                  לרעח. לת צשחמי צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה
+                  שיצמה ברורק. גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק
+                  ליץ, הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך
+                  וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת יבש, כאנה ניצאחו
+                  נמרגי שהכים תוק, הדש שנרא התידם הכייר וק..
                 </div>
               </div>
             </div>

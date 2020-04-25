@@ -15,11 +15,11 @@ function Header() {
   return (
     <React.Fragment>
       <div style={{ padding: "5px" }}>
-        <div style={{ borderLeft: "5px solid green", padding: "5px" }}>
+        <div style={{ borderRight: "5px solid green", padding: "5px" }}>
           <h2>
-            Plague days{" "}
+            ימי מגיפה{" "}
             <span style={{ color: "#888" }}>
-            | Historical Jewish Manuscripts
+              | כתבי-יד יהודיים העוסקים במגיפות
             </span>
           </h2>
         </div>

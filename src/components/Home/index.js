@@ -23,24 +23,24 @@ function Home() {
       <Header />
       <Grid container>
         <Grid item sm={6} className={classes.gridPart}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולהע צופעט למרקוח
+          איבן איף, ברומץ כלרשט מיחוצים. קלאצי להאמית קרהשק סכעיט דז מא, מנכם
+          למטכין נשואי מנורךגולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק
+          ליץ, ושבעגט. לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו צמלח
+          לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. גולר מונפרר סוברט לורם שבצק
+          יהול, לכנוץ בעריר גק ליץ, הועניב היושבב שערש שמחויט - שלושע ותלברו
+          חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת יבש, כאנה
+          ניצאחו נמרגי שהכים תוק, הדש שנרא התידם הכייר וק..
         </Grid>
         <Grid item sm={6} className={classes.gridPart}>
-        <Button
+          <Button
             href={`/manuscripts`}
             variant="contained"
-
             className="CheckButton"
             style={{ width: "100%" }}
-          >Explore manuscripts</Button>
+          >
+            ספריית כתבי היד
+          </Button>
         </Grid>
       </Grid>
     </div>

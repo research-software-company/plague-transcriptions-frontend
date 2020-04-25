@@ -2,7 +2,7 @@ import store from "./Store";
 import axios from "axios";
 const BASE_URL =
   process.env.NODE_ENV === "development"
-    ? "http://localhost:5000"
+    ? "https://plague-backend.researchsoftwarehosting.org"//"http://localhost:5000"
     : "https://plague-backend.researchsoftwarehosting.org";
 
 export default {

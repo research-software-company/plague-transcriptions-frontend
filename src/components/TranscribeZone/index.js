@@ -43,7 +43,7 @@ const TranscribeZone = class Transcribe extends React.Component {
       <React.Fragment>
         <div>
           <div>
-            <a href="/manuscripts">Manuscripts</a>
+            <a href="/manuscripts">כתבי היד</a>
           </div>
           <div style={{ fontWeight: "bold" }}>
             {manuscript.heb_name || manuscript.eng_name} ({this.props.item.page.page_name})
@@ -52,7 +52,7 @@ const TranscribeZone = class Transcribe extends React.Component {
           <div style={{ fontSize: "10px" }}>
             {manuscript.shelf_no} |{" "}
             <a href={manuscript.external_url} target="_blank">
-              Additional information
+              מידע נוסף
             </a>
           </div>
         </div>
@@ -71,14 +71,14 @@ const TranscribeZone = class Transcribe extends React.Component {
               color="primary"
               onClick={this.goToNextPage.bind(this)}
             >
-              Next Page
+              עמוד הבא
             </Button>
             <Button
               variant="contained"
               color="primary"
               onClick={this.sendTranscription.bind(this)}
             >
-              Send
+              שלח
             </Button>
           </div>
         </div>

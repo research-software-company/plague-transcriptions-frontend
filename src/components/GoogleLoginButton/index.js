@@ -26,7 +26,7 @@ const GoogleLoginButton =
         <GoogleLogin
           clientId="374041413022-1bmtkoqnoiosuen3kic3bqkfevsqs89p.apps.googleusercontent.com"
           render={(renderProps) => (
-            <span onClick={renderProps.onClick} style={{cursor:'pointer'}}>Signin with Google</span>
+            <span onClick={renderProps.onClick} style={{cursor:'pointer'}}>כניסה</span>
           )}
           buttonText="Login with Google"
           onSuccess={function (response) {
@@ -41,7 +41,7 @@ const GoogleLoginButton =
         <GoogleLogout
           clientId="374041413022-1bmtkoqnoiosuen3kic3bqkfevsqs89p.apps.googleusercontent.com"
           render={(renderProps) => (
-            <span onClick={renderProps.onClick} style={{cursor:'pointer'}}>Signout</span>
+            <span onClick={renderProps.onClick} style={{cursor:'pointer'}}>יציאה</span>
           )}
           onLogoutSuccess={this.logout.bind(this)}
         ></GoogleLogout>

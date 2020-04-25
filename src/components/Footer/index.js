@@ -16,8 +16,9 @@ function Footer() {
     <React.Fragment>
       <div style={{ borderTop: "1px solid #333", minHeight: "60px" }}>
         <div style={{ padding: "5px" , display:'flex'}}>
-          <div style={{ borderLeft: "5px solid green", padding: "5px" }}>
-          A joint project of <span>the Haifa University <a href="http://elijahlab.haifa.ac.il/index.php/en/" target="_blank">eLijah lab for Digital Humanities</a> </span> and <span>the <a href="https://www.researchsoftware.co.il" target="_blank">Research Software Company</a></span>
+          <div style={{ borderRight: "5px solid green", padding: "5px" }}>
+
+          פרויקט משותף ל <span><a href="http://elijahlab.haifa.ac.il/index.php/en/" target="_blank">מעבדת אליהו למדעי הרוח הדיגיטליים</a> באוניברסיטת חיפה </span> ול<span><a href="https://www.researchsoftware.co.il" target="_blank">חברה לתוכנה מחקרית</a></span>
           </div>
           <div style={{ padding: "5px" }}>
             

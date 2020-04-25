@@ -35,9 +35,9 @@ function Navbar() {
         <Toolbar>
           <Typography className={classes.title}>
             <Link className={classes.link} to="/">
-              Plague days{" "}
+              ימי מגיפה{" "}
               <span style={{ color: "#888" }}>
-              | Historical Jewish Manuscripts
+              | כתבי-יד יהודיים העוסקים במגיפות
               </span>
             </Link>
           </Typography>

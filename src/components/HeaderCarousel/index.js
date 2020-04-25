@@ -20,7 +20,8 @@ const HeaderCarousel = observer(
 
       const items = randomManuscripts.length
         ? randomManuscripts.map((manuscript, i) => {
-            return <HeaderCarouselItem item={manuscript} key={i} />;
+            
+            return manuscript ? <HeaderCarouselItem item={manuscript} key={i} />: null;
           })
         : null;
 

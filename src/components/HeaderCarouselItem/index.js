@@ -7,19 +7,26 @@ const HeaderCarouselItem = class HeaderCarouselItem extends React.Component {
     super();
   }
   render() {
+    let backgroundStyle = {
+      flex: 3,
+    };
+
+    const backgroundImage =
+      this.props.item &&
+      this.props.item.pages &&
+      this.props.item.pages.length &&
+      `${this.props.item.pages[1].iiif_url}/full/,280/0/default.jpg)`;
+    if (backgroundImage) {
+      backgroundStyle.backgroundSize = "cover";
+      backgroundStyle.backgroundRepeat = "no-repeat";
+    }
+
     return (
       <div
         className="header-carousel-item"
         style={{ display: "flex", height: "100%" }}
       >
-        <div
-          style={{
-            flex: 3,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundImage: `url(${this.props.item.pages[1].iiif_url}/full/,280/0/default.jpg)`,
-          }}
-        ></div>
+        <div style={backgroundStyle}></div>
         <div
           style={{
             display: "flex",
@@ -37,8 +44,11 @@ const HeaderCarouselItem = class HeaderCarouselItem extends React.Component {
               textAlign: "center",
             }}
           >
-            <h2>{this.props.item.heb_name || this.props.item.eng_name}</h2>
-            <p>{this.props.item.notes}</p>
+            <h2>
+              {this.props.item &&
+                (this.props.item.heb_name || this.props.item.eng_name)}
+            </h2>
+            <p>{this.props.item && this.props.item.notes}</p>
           </div>
           <Button
             href={`/transcribe/${this.props.item.pages[0].id}`}
@@ -47,7 +57,7 @@ const HeaderCarouselItem = class HeaderCarouselItem extends React.Component {
             className="CheckButton"
             style={{ width: "100%" }}
           >
-            Go ahead!
+            צאו לדרך
           </Button>
         </div>
       </div>
