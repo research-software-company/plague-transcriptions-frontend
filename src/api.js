@@ -1,9 +1,6 @@
 import store from "./Store";
 import axios from "axios";
-const BASE_URL =
-  process.env.NODE_ENV === "development"
-    ? "https://plague-backend.researchsoftwarehosting.org"//"http://localhost:5000"
-    : "https://plague-backend.researchsoftwarehosting.org";
+const BASE_URL = process.env.BACKEND_URL;
 
 export default {
   getPendingManuscripts(formData) {
