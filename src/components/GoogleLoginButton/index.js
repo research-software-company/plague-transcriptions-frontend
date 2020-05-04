@@ -34,7 +34,6 @@ const GoogleLoginButton =
           }.bind(this)}
           onFailure={this.failureCallback}
           cookiePolicy={'single_host_origin'}
-          autoLoad={true}
           isSignedIn={true}
         />
       ) : (

@@ -1,5 +1,6 @@
 import store from "./Store";
 import axios from "axios";
+console.log(process.env)
 const BASE_URL = process.env.BACKEND_URL;
 
 export default {
