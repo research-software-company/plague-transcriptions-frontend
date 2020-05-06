@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
-import TranscribeZone from "../TranscribeZone";
+import TranscribeZoneWrapper from "../TranscribeZoneWrapper";
 import api from "../../api";
 import Navbar from "../Navbar";
 import { observer } from "mobx-react";
@@ -64,7 +64,7 @@ const Transcribe = class Transcribe extends React.Component {
 
   render() {
     const item = this.state.item;
-    const itemTranscribeZone = item ? <TranscribeZone item={item} /> : null;
+    const itemTranscribeZone = item ? <TranscribeZoneWrapper item={item} /> : null;
 
     return (
       <React.Fragment>

@@ -1,7 +1,7 @@
 import store from "./Store";
 import axios from "axios";
-console.log(process.env)
-const BASE_URL = process.env.BACKEND_URL;
+console.log(process.env);
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 export default {
   getPendingManuscripts(formData) {
@@ -9,7 +9,7 @@ export default {
     return axios.get(`${BASE_URL}/pending`);
   },
 
-  sendTranscription({ transcriptionId, text }) {
+  sendTranscription({ transcriptionId, text1, text2, notes1, notes2, num_pages }) {
     let user_email =
       store.state.auth.loggedIn && store.state.auth.loggedIn.profileObj.email;
     if (user_email) {
@@ -17,7 +17,11 @@ export default {
     }
 
     return axios.put(`${BASE_URL}/transcription/${transcriptionId}`, {
-      text,
+      text1,
+      text2,
+      notes1,
+      notes2,
+      num_pages,
       user_email,
     });
   },
