@@ -6,9 +6,9 @@ import HeaderCarouselItem from "../HeaderCarouselItem";
 
 const HeaderCarousel = observer(
   class HeaderCarousel extends React.Component {
-    constructor() {
+    /* constructor() {
       super();
-    }
+    } */
 
     render() {
       const manuscripts = store.state.manuscripts;

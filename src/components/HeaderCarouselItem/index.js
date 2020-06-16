@@ -1,11 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
 
 const HeaderCarouselItem = class HeaderCarouselItem extends React.Component {
-  constructor() {
-    super();
-  }
   render() {
     let backgroundStyle = {
       flex: 3,

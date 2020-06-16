@@ -1,5 +1,5 @@
 import React from "react";
-import { TextareaAutosize, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import TranscribeZone from "../TranscribeZone";
 import api from "../../api";
 import store from "../../Store";
@@ -87,7 +87,7 @@ const TranscribeZoneWrapper = class TranscribeZoneWrapper extends React.Componen
           <div>{manuscript.notes}</div>
           <div style={{ fontSize: "10px" }}>
             {manuscript.shelf_no} |{" "}
-            <a href={manuscript.external_url} target="_blank">
+            <a href={manuscript.external_url} target="_blank" rel="noopener noreferrer">
               מידע נוסף
             </a>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import Grid from "@material-ui/core/Grid";
+// import Grid from "@material-ui/core/Grid";
 import ManuscriptThumb from "../ManuscriptThumb";
 import { observer } from "mobx-react";
 import store from "../../Store";
@@ -9,10 +9,6 @@ import Navbar from "../Navbar";
 const Manuscripts = withRouter(
   observer(
     class Manuscripts extends React.Component {
-      constructor() {
-        super();
-      }
-
       transcribePage(manuscript) {
         const pageId = manuscript.pages[0].id;
         this.props.history.push(`/transcribe/${pageId}`);

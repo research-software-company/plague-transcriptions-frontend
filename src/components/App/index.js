@@ -1,15 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "../Home";
 import Manuscripts from "../Manuscripts";
-import Content from "../Content";
 
 import Transcribe from "../Transcribe";
 import "./App.scss";
 import Footer from "../Footer";
-import ProtectedRoute from "../ProtectedRoute";
 import api from '../../api';
 import store from '../../Store';
 import { observer } from "mobx-react";
