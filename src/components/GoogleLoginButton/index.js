@@ -2,7 +2,6 @@ import React from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 
 import store from "../../Store";
-import { withRouter } from "react-router-dom";
 import { observer } from "mobx-react";
 
 const GoogleLoginButton = 
@@ -45,7 +44,7 @@ const GoogleLoginButton =
           onLogoutSuccess={this.logout.bind(this)}
         ></GoogleLogout>
       );
-      const userImg = store.state.auth.loggedIn && store.state.auth.loggedIn.profileObj.imageUrl && <img style={{width:'40px', height:'40px', borderRadius: '50%'}} src={store.state.auth.loggedIn.profileObj.imageUrl} />
+      const userImg = store.state.auth.loggedIn && store.state.auth.loggedIn.profileObj.imageUrl && <img style={{width:'40px', height:'40px', borderRadius: '50%'}} src={store.state.auth.loggedIn.profileObj.imageUrl} alt="Logged in user"/>
       
       return <React.Fragment>
           

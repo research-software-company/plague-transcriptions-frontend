@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -33,7 +33,7 @@ function ManuscriptThumb({ manuscript, transcribePage }) {
   const thumbnailImgUrl =
     iiif_url && `${manuscript.pages[0].iiif_url}/full/,280/0/default.jpg`;
   const thumbnailImg = thumbnailImgUrl && (
-    <img src={thumbnailImgUrl} style={{ width: "100%" }} />
+    <img src={thumbnailImgUrl} style={{ width: "100%" }} alt="Page thumbnail"/>
   );
   return (
     <div className={classes.paper} onClick={transcribePage}>

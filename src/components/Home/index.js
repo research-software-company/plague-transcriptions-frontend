@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Header from "../Header";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
