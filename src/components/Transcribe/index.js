@@ -35,10 +35,7 @@ const Transcribe = class Transcribe extends React.Component {
           gestureSettingsTouch: {
             pinchRotate: true,
           },
-          tileSources: {
-            type: "image",
-            url: `${item.page.iiif_url}/full/full/0/default.jpg`,
-          },
+          tileSources: [`${item.page.iiif_url}/info.json`],
         });
       });
     });
